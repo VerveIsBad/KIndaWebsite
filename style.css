@@ -1,5 +1,41 @@
+:root {
+    font-size: 16px;
+}
+
+html, body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+    color: #ffe;
+    overflow-x: hidden;
+}
 
 #About_me {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', courier, monospace;
+    color: #ffffff;
 } 
 
+body {
+    font-size: 1rem;
+}
+
+
+h1 {
+    font-size: 1.5rem;
+}
+
+p, a, h1, h2, h3, h4, h5, h6, span {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    width: 1000px;
+    height: 30px;
+}
