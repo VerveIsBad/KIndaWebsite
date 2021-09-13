@@ -11,6 +11,17 @@ html, body {
     overflow-x: hidden;
 }
 
+.nav-bar {
+    width: 100vw;
+    height: 20px;
+    background-color: lightseagreen;
+    border-radius: 0 0 8px 8px;
+    margin-left: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
 #About_me {
     font-family: 'Courier New', courier, monospace;
     color: #ffffff;
@@ -18,6 +29,7 @@ html, body {
 
 body {
     font-size: 1rem;
+    padding-top: 20px;
 }
 
 
@@ -34,7 +46,7 @@ p, a, h1, h2, h3, h4, h5, h6, span {
     width: 100px;
     height: 100px;
     background-color: blue;
-    border: 2px solid aliceblue;
+    border: 2px solid lightblue;
     border-radius: 20px;
     width: 1000px;
     height: 30px;
