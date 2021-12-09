@@ -5,6 +5,8 @@ function changeToRandomColor() {
     document.body.style.background = colors[random] 
     document.getElementById("bg-color").innerHTML = `Background color : ${colors[random]}`  
 }
+
+
 window.onload=() => {
     changeToRandomColor()
     var btn = document.getElementById("colorButton")
