@@ -17,13 +17,11 @@
   **/
 }
 /* padding = space between content and border*/
-
 .mainContent {
   text-align: center;
-
   vertical-align: middle;
-  font-size: xx-large;
 
+  font-size: xx-large;
 
   border-radius: 15px;
 
@@ -57,4 +55,7 @@
 #bg-color > span {
   color: mediumturquoise;
 }
+
+
+
 
