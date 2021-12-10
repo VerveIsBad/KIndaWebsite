@@ -38,6 +38,8 @@ html {
     font-size: 20px;
 
     width: 10vw;
+
+    cursor: pointer;
 }
 
 #bg-color > span {
