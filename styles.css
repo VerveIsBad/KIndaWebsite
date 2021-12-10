@@ -1,48 +1,60 @@
-html {
-    width: 100vw;
-    height: 100vh;
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* this is what centers your element in the fixed wrapper*/
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; /* aligns on vertical for column */
+  align-items: center; /* aligns on horizontal for column */
+
+  /* Use this to see the limits of the main container
+  border: 2px dashed red;
+  box-sizing: border-box;
+  **/
 }
+/* padding = space between content and border*/
 
 .mainContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-    font-size: xx-large;
-    font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 
-    color: white;
+  vertical-align: middle;
+  font-size: xx-large;
 
-    background-color: black;
 
-    width: 40vw;
-    height: 25vh;
-    
-    border-radius:25px;
+  border-radius: 15px;
+
+  background-color: black;
+ 
+  color: white;
+  
+  height: 15vh;
+  width: 70vh;
+
 }
 
-#colorButton {    
-    color: black;
+#colorButton {  
+  margin-top: 10px;
 
-    border-color: black;
-    border-radius: 5px;
-
-    background-color: none;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-
-    width: 10vw;
-
-    cursor: pointer;
+  color: black;
+  
+  border-color: black;
+  border-radius: 5px;
+  
+  background-color: none;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  
+  width: 10vw;
+  
+  cursor: pointer;
 }
 
 #bg-color > span {
-    color: mediumturquoise;
+  color: mediumturquoise;
 }
 
