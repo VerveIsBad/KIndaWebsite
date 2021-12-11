@@ -11,11 +11,26 @@
   justify-content: center; /* aligns on vertical for column */
   align-items: center; /* aligns on horizontal for column */
 
-  /* Use this to see the limits of the main container
+  /*
+  debug items
+  outlines the container 
   border: 2px dashed red;
   box-sizing: border-box;
-  **/
+  */
+  
 }
+
+.nav-bar {
+  position: absolute;
+  z-index: 10;
+  /*
+  debug items.
+  outlines the nav-bar
+  border: 2px dashed yellow;
+  box-sizing: border-box;
+  */
+}
+
 /* padding = space between content and border*/
 .mainContent {
   text-align: center;
@@ -56,6 +71,53 @@
   color: mediumturquoise;
 }
 
+/* this is just a bunch of 
+nav bar stuff lmao idk what half of it does */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+/* Add a gray right border to all list items, except the last item (last-child) */
+border-right: 1px solid #bbb;
+}
 
 
+li:last-child {
+  border-right: none;
+}
 
+li a {
+  user-select: none;
+
+  display: block;
+
+  color: white;
+
+  border-color: #333;
+
+  text-decoration: none;
+  text-align: center;
+
+  padding: 14px 16px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  cursor: pointer;
+  border-color: #111;
+  background-color: #111;
+}
+
+
+.active {
+  border-color: #333;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-color: #04AA6D;
+}
