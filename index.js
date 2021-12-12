@@ -7,9 +7,12 @@ const colors = [
 ]
 const arrayOfColorFunctions = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
 let randomColorString = '#';
-let mode = "simple"
+let mode = "simple" // inital mode
 
 function simpleChangeToRandomColor() {
+    /* grab random color from the colors array 
+    and sets it to the bg color 
+    **/
     var random = Math.floor(Math.random() * colors.length)
     document.body.style.background = colors[random]
     document.getElementById("bg-color").innerHTML = `Background color : <span>${colors[random]}</span>`
@@ -17,6 +20,11 @@ function simpleChangeToRandomColor() {
 }
 
 function hexChangeToRandomColor() {
+    /* generate a random hex color value
+    for loop: grabs random char from the array of
+    possible characters and adds it to the 
+    randomColorSting
+    **/
     for (let x = 0; x < 6; x++){
 
         let index = Math.floor(Math.random() * 16)
@@ -27,52 +35,50 @@ function hexChangeToRandomColor() {
     document.getElementById("bg-color").innerHTML = `Background color : <span>${randomColorString}</span>`
     document.body.style.background = randomColorString
     document.getElementById("colorButton").style.backgroundColor = randomColorString
-    randomColorString = "#"
+    randomColorString = "#" // reset the string to base value
 
 }
 
-window.onload = () => {
-    if (mode === "simple") {
-        simpleChangeToRandomColor() 
-    } else if (mode === "hex") {
-        hexChangeToRandomColor() 
-    } else {
-        console.log(`An error has occured. ${mode}`)
-    }
-    
-    var Colorbtn = document.getElementById("colorButton")
-    
-    Colorbtn.addEventListener("click", () => {
-        if (mode === "simple") {
-            simpleChangeToRandomColor() 
-        } else if (mode === "hex") {
-            hexChangeToRandomColor() 
-        } else {
+function getMode() {
+    /* Gets the current mode and calls the correct func
+    **/
+    switch (mode) { // all possible modes
+        case "simple":
+            simpleChangeToRandomColor()
+            break
+        case "hex":
+            hexChangeToRandomColor()
+            break
+        default:
             console.log(`An error has occured. ${mode}`)
-        }
-    }, true)
+            break
+    }
+}
 
-    simpleMode = document.getElementById("simple")
-    hexMode = document.getElementById("hex")
+window.onload = () => {
+    getMode() 
+
+    // ----- grab elements ----- //
+    const Colorbtn = document.getElementById("colorButton")
+    const simpleMode = document.getElementById("simple")
+    const hexMode = document.getElementById("hex")
+    // ----- grab elements ----- //
+
+
+    // ----- add event listeners ----- //
+    Colorbtn.addEventListener("click", getMode, true) // activates the color switch
 
     simpleMode.addEventListener('click', () => {
         mode = "simple"
-        if (simpleMode.classList.contains('active')) {
-            hexMode.classList.remove("active")
-        } else {
-            simpleMode.classList.add("active")
-            hexMode.classList.remove("active")
-        }
+        simpleMode.classList.add("active") // change active status
+        hexMode.classList.remove("active")
     }, true)
 
     hexMode.addEventListener("click", () => {
         mode = "hex"
-        if (hexMode.classList.contains("active")) {
-            simpleMode.classList.remove("active")
-        } else {
-            hexMode.classList.add("active")
-            simpleMode.classList.remove("active")
-        }
+        hexMode.classList.add("active") // change active status
+        simpleMode.classList.remove("active")
     }, true)
+    // ----- add event listeners ----- //
 
-}
+} // end script 
