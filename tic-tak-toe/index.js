@@ -10,18 +10,19 @@ window.onload = () => {
     let turn = "o"
 
     // cells 
-    cell_1 = document.getElementById("cell_1")
-    cell_2 = document.getElementById("cell_2")
-    cell_3 = document.getElementById("cell_3")
-    cell_4 = document.getElementById("cell_4")
-    cell_5 = document.getElementById("cell_5")
-    cell_6 = document.getElementById("cell_6")
-    cell_7 = document.getElementById("cell_7")
-    cell_8 = document.getElementById("cell_8")
-    cell_9 = document.getElementById("cell_9")
+    const cell_1 = document.getElementById("cell_1")
+    const cell_2 = document.getElementById("cell_2")
+    const cell_3 = document.getElementById("cell_3")
+    const cell_4 = document.getElementById("cell_4")
+    const cell_5 = document.getElementById("cell_5")
+    const cell_6 = document.getElementById("cell_6")
+    const cell_7 = document.getElementById("cell_7")
+    const cell_8 = document.getElementById("cell_8")
+    const cell_9 = document.getElementById("cell_9")
     // cells 
 
-    currentTurn = d
+    var turnCounter = document.getElementById("turnCounter")
+    turnCounter.innerHTML = turn
 
     cell_1.addEventListener("click", ()  => {
         
@@ -38,6 +39,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! Please wait Your turn.")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
     cell_2.addEventListener("click", () => {
@@ -55,6 +57,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
 
@@ -73,6 +76,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
     cell_4.addEventListener("click", () => {
@@ -90,6 +94,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
     cell_5.addEventListener("click", () => {
@@ -107,6 +112,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
     cell_6.addEventListener("click", () => {
@@ -124,6 +130,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
     cell_7.addEventListener("click", () => {
@@ -141,6 +148,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
     cell_8.addEventListener("click", () => {
@@ -158,6 +166,7 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 
     cell_9.addEventListener("click", () => {
@@ -175,5 +184,6 @@ window.onload = () => {
         } else {
             alert("You cant do that! please wait your turn!")
         }
+        turnCounter.innerHTML = turn
     }, true)
 }
