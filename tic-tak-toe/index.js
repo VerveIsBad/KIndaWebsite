@@ -4,7 +4,7 @@ let state = [
     [null,null,null]
 ]
 
-let debug = false
+let debug = false // change to true for debugging
 let turn = "o"
 
 
@@ -149,7 +149,7 @@ function updateGameState(cell, row, collumn) {
         }
     } else {
         alert("You cant do that! Please wait Your turn.")
-        
+
     }
     checkForWinState()
 }
