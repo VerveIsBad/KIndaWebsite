@@ -1,21 +1,42 @@
 body {
 	display: flex;
+	user-select:  none;
+
 	justify-content: center;
 }
 
 
-.grid{
-
-	border: 2px solid red;
-
+.grid {
+	position: absolute;
 	display: grid;	
     grid-template-rows: 200px 200px 200px;
-    grid-template-columns: 200px 200px 200px;}
+    grid-template-columns: 200px 200px 200px;
+}
+
+.utils-container {
+	width: 600px;
+
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+
+}
+
+.utils-container p {
+	padding: 10px;
+	float: left;
+	cursor: pointer;
+}
 
 .cell {
-	display: inline-block;
+	display: inline-flex;
+
+	justify-content: center;
+	align-items: center;
+	
+	font-size: xx-large;
 
 	padding: 12px;
-	
 	border: 1px solid lightgrey;
 }
