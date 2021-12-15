@@ -55,18 +55,17 @@ function checkForWinState() {
         check(state[1], "x") ||
         check(state[2], "x")
     ) {
-        setTimeout( () => {
+        
             alert("X wins!")
-            }, 20)
+
         clear()
     } else if (
         check(state[0], "o") ||
         check(state[1], "o") ||
         check(state[2], "o")
     ) {
-        setTimeout( () => {
+        
         alert("O wins!")
-        }, 20)
         clear()
     } else {
         null
@@ -80,18 +79,16 @@ function checkForWinState() {
         check( [ state[0][1], state[1][1], state[2][1] ], "x") || // collumn 2 for x
         check( [ state[0][2], state[1][2], state[2][2] ], "x")    // collumn 3 for x
     ) {
-        setTimeout( () => {
+        
         alert("X wins!")
-        }, 20)
         clear()
     } else if (
         check( [ state[0][0], state[1][0], state[2][0] ], "o") || // collumn 1 for o
         check( [ state[0][1], state[1][1], state[2][1] ], "o") || // collumn 2 for o
         check( [ state[0][2], state[1][2], state[2][2] ], "o")    // collumn 3 for o 
     ) {
-        setTimeout( () => {
+        
         alert("O wins!")
-        }, 20)
         clear()
     }
     // check for collumn wins
@@ -108,9 +105,8 @@ function checkForWinState() {
         check( [ state[2][0], state[1][1], state[0][2] ], "o") ||
         check( [ state[2][2], state[1][1], state[0][0] ], "o") 
     ) {
-        setTimeout( () => {
+        
         alert("O wins!")
-        }, 20)
         clear()
     }
     // check for diagnol wins
