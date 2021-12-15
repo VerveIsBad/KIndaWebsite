@@ -149,6 +149,7 @@ function updateGameState(cell, row, collumn) {
         }
     } else {
         alert("You cant do that! Please wait Your turn.")
+        
     }
     checkForWinState()
 }
